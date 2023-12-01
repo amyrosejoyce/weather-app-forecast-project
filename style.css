@@ -77,10 +77,19 @@ h1 {
 }
 
 .weather-forecast {
-  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
   margin-bottom: 20px;
-  text-align: center;
   color: #000;
+  text-align: center;
+}
+
+.weather-forecast-icon {
+  width: 28px;
+  height: 28px;
+  display: block;
+  margin: 0 auto;
 }
 
 .weather-forecast-date {
@@ -89,7 +98,11 @@ h1 {
 }
 
 .weather-forecast-temperatures {
+  text-align: center;
+  margin-top: 10px;
   font-size: 13px;
+  display: flex;
+  justify-content: center;
 }
 
 .weather-forecast-temperature-min {
