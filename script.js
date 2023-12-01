@@ -75,8 +75,9 @@ function displayForecast(response) {
   let forecastHtml = "";
 
   response.data.daily.forEach(function (day, index) {
-    if (index < 5) {
+    if (index < 3) {
       forecastHtml += `
+      <div class="weather-forecast-day">
 <div class="weather-forecast-date">${formatDay(day.time)}</div>
 <div  >
 <img src="${day.condition.icon_url}"class="weather-forecast-icon"/>
@@ -88,6 +89,7 @@ function displayForecast(response) {
 <span class="weather-forecast-temperature-min">${Math.round(
         day.temperature.minimum
       )}°</span>
+</div>
 </div>
 `;
     }
